@@ -54,7 +54,7 @@ router.post("/register", async (req, res) => {
     });
 
     req.session.userId = newUser._id;
-    res.redirect("/users");
+    res.redirect("/users/login");
   } catch (error) {
     res.render("register", {
       errors: { general: { message: "Registration failed" } },
